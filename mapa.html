@@ -1,0 +1,75 @@
+---
+layout: layouts/layout.njk
+title: Mapa
+---
+    <h2 class="page__title">Mapa</h2>
+
+<div class="container-map">
+  <div id="mapa"></div>
+</div>
+
+<script type="text/javascript">
+  var stred = SMap.Coords.fromWGS84(14.43, 50.08);
+  var mapa = new SMap(JAK.gel("mapa"), stred, 7);
+  mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+  mapa.addDefaultControls();
+
+  var layer = new SMap.Layer.Marker();
+  mapa.addLayer(layer);
+  layer.enable();
+
+  {% for pribeh in collections.pribehy %}
+  {
+    let souradnice = SMap.Coords.fromWGS84({{pribeh.data.lon}}, {{pribeh.data.lat}});
+    let card = new SMap.Card();
+    card.getHeader().innerHTML = "<strong>{{ pribeh.data.title }}</strong>";
+    card.getBody().innerHTML = '<p>{{ pribeh.data.popis }}</p><p><a href="{{ pribeh.url }}">Článek</a></p>';
+
+    let options = {
+      title: "{{pribeh.data.nazev}}",
+      url: "https://api.mapy.cz/img/api/marker/drop-red.png", // cesta k ikoně markeru
+    };
+    let marker = new SMap.Marker(souradnice, "{{ pribeh.data.nazev }}", options);
+    marker.decorate(SMap.Marker.Feature.Card, card);
+    layer.addMarker(marker);
+  }
+  {% endfor %}
+
+  {% for kniha in collections.knihy %}
+  {
+    let souradnice = SMap.Coords.fromWGS84({{kniha.data.lon}}, {{kniha.data.lat}});
+    let card2 = new SMap.Card();
+    card2.getHeader().innerHTML = "<strong>{{ kniha.data.title }}</strong>";
+    card2.getBody().innerHTML = '<p>{{ kniha.data.popis }}</p><p><a href="{{ kniha.url }}">Článek</a></p>';
+
+    let options2 = {
+      title: "{{kniha.data.nazev}}",
+      url: "https://api.mapy.cz/img/api/marker/drop-blue.png", // cesta k ikoně markeru
+    };
+    let marker2 = new SMap.Marker(souradnice, "{{ kniha.data.nazev }}", options2);
+    marker2.decorate(SMap.Marker.Feature.Card, card2);
+    layer.addMarker(marker2);
+  }
+  {% endfor %}
+
+  {% for deskovka in collections.deskovky %}
+  {
+    let souradnice = SMap.Coords.fromWGS84({{deskovka.data.lon}}, {{deskovka.data.lat}});
+    let card3 = new SMap.Card();
+    card3.getHeader().innerHTML = "<strong>{{ deskovka.data.title }}</strong>";
+    card3.getBody().innerHTML = '<p>{{ deskovka.data.popis }}</p><p><a href="{{ deskovka.url }}">Článek</a></p>';
+
+    let options3 = {
+      title: "{{deskovka.data.nazev}}",
+      url: "https://api.mapy.cz/img/api/marker/drop-yellow.png", // cesta k ikoně markeru
+    };
+    let marker3 = new SMap.Marker(souradnice, "{{ deskovka.data.nazev }}", options3);
+    marker3.decorate(SMap.Marker.Feature.Card, card3);
+    layer.addMarker(marker3);
+  }
+  
+  {% endfor %}
+
+</script>
+
+

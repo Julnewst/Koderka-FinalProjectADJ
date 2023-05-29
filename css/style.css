@@ -1,0 +1,501 @@
+/*font-family: 'Allura', cursive;
+font-family: 'Grechen Fuemen', cursive;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Playfair Display', serif;*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+:root {
+  background-color: #FAFAFA;
+  font-size: 1.2rem;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.nav-item {
+  list-style: none;
+  padding: 1rem;
+  flex-grow: 0;
+  flex-shrink: 2;
+}
+
+.nav-link {
+  display: block;
+  color: #729343;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #2fa09d;
+}
+
+.nav-link:focus {
+  color: #29055a;
+}
+
+.nav-link:active {
+  color: #3282cd;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  align-self: auto;
+  order: 0;
+  width: 100%;
+  min-height: 70px;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 78%;
+  align-self: auto;
+  order: 0;
+  font-weight: 700;
+}
+
+.nav-branding {
+  font-size: 2rem;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 20%;
+  align-self: center;
+  order: 0;
+  margin: 0.5rem;
+}
+
+.nav-branding__logo {
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s easy;
+  background-color: #729343;
+}
+
+.site-header__banner {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  align-self: auto;
+  order: 0;
+  background-image: url(/images/backgrounds/luxury-plain-green-gradient-abstract-studio-background-empty-room-with-space-your-text-picture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 6rem;
+}
+
+.site-header__searchbar {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  align-self: auto;
+  order: 0;
+  background-color: #E9F4FF;
+  padding: 0.5rem;
+  color: black;
+  font-weight: 700;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 20%;
+  min-width: 200px;
+  border: 2px solid #83c0fd;
+  border-right: none;
+  padding: 5px;
+  height: 25px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #729343;
+}
+
+.searchTerm:focus {
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #83c0fd;
+  background-color: #83c0fd;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main {
+  display: block;
+  padding: 1rem;
+  margin: 0;
+  flex-grow: 6;
+  flex-shrink: 1;
+}
+
+.text {
+  padding-bottom: 0.8rem;
+}
+
+.text__link {
+  color: #729343;
+  font-weight: bold;
+}
+
+.text__link:hover {
+  color: #2fa09d;
+}
+
+.article__title--summary-page {
+  color: #729343;
+}
+
+.article__title--summary-page:hover {
+  color: #2fa09d;
+}
+
+.article__text--summary-page {
+  padding: 0.5rem 0.5rem;
+}
+
+.text--notation {
+  font-style: italic;
+  font-size: 0.6rem;
+}
+
+.split-line {
+  margin: 1rem 0;
+}
+
+.page__title {
+  color: #3282cd;
+  padding-bottom: 1rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  padding: 0.5rem;
+}
+
+.article__title {
+  display: block;
+  flex-basis: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  color: #729343;
+  font-size: 1.3rem;
+}
+
+.article__title--homepage {
+  display: block;
+  flex-basis: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  color: #729343;
+  font-size: 1.5rem;
+}
+
+.article__body {
+  display: block;
+  flex-basis: 100%;
+}
+
+.article__figure {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: flex-start;
+  float: left;
+  max-width: 300px;
+  margin-right: 3rem;
+}
+
+.article__img {
+  display: block;
+  width: 100%;
+  padding: 0 0.5rem 0.5rem 0;
+}
+
+.article__figcaption {
+  color: #4e4d4d;
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.article__text {
+  display: block;
+  flex-basis: 60%;
+  margin: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.list-in-item {
+  list-style: decimal;
+  margin-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.list-in-item__detail {
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+
+.list-in-item__detail a {
+  text-decoration: none;
+}
+
+.aside {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 20%;
+  padding-left: 1rem;
+  padding: 1rem;
+}
+
+.aside__advert {
+  display: block;
+  flex-shrink: 1;
+  width: 100%;
+  margin: 0.2rem;
+}
+
+#mapa {
+  display: block;
+  margin: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 700px;
+  min-height: 500px;
+  width: 90%;
+}
+
+.container-map {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.footer {
+  background-color: #E9F4FF;
+  text-align: center;
+  padding: 0.5rem;
+  color: #729343;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.contact {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+form {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 0.5rem;
+  color: #4e4d4d;
+  font-size: 1;
+}
+
+.form-field {
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+}
+
+.form-field label, select {
+  display: block;
+  color: #4e4d4d;
+  margin-left: 0.5rem;
+}
+
+.form-field input,
+select,
+.form-field textarea {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+label, select {
+  margin: 0.5rem 0;
+}
+
+.contact-container {
+  margin: 2rem;
+}
+
+input, textarea, select {
+  background-color: #ffffcc;
+  border: 1px solid #83c0fd;
+  background-color: #E9F4FF;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #729343;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    display: block;
+    border-bottom: 1px solid #E9F4FF;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-link {
+    color: white;
+  }
+  .site-header__banner {
+    height: 1rem;
+  }
+  .article__figure {
+    max-width: 30%;
+  }
+  .footer {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .article__title {
+    margin: auto;
+    text-align: center;
+  }
+  .article__figure {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin: auto;
+    clear: left;
+  }
+  .article__img {
+    display: block;
+    width: 100%;
+    padding: 0 0.5rem 0.5rem 0;
+  }
+  .article__text {
+    flex-basis: 100%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+  .main {
+    flex-grow: 0;
+    flex-basis: 100%;
+  }
+  .aside {
+    flex-grow: 0;
+    flex-basis: 100%;
+    max-width: 75%;
+    margin: auto;
+  }
+  .aside__advert {
+    display: block;
+    flex-shrink: 1;
+    width: 100%;
+  }
+  #mapa {
+    min-width: 300px;
+    min-height: 300px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

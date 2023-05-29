@@ -1,0 +1,17 @@
+---
+layout: layouts/layout-advert.njk
+title: Deskovky
+---
+
+<h2 class="page__title">Deskovky</h2>
+
+{% for deskovka in collections.deskovky %}
+
+<h3 class="article__title"><a class="article__title--summary-page" href="{{deskovka.url}}">{{deskovka.data.title}}</a></h3>
+<p class="article__text--summary-page">{{deskovka.data.popis}}</p>
+<p class="article__text--summary-page">{{deskovka.data.perex}}</p>
+<p class="article__text--summary-page"><a href="{{deskovka.url}}">Celý článek</a></p>
+<hr class="split-line">
+
+
+{% endfor %}

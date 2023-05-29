@@ -1,0 +1,17 @@
+---
+layout: layouts/layout-advert.njk
+title: Knihy
+---
+
+<h2 class="page__title">Knihy</h2>
+
+{% for kniha in collections.knihy %}
+
+<h3 class="article__title"><a class="article__title--summary-page" href="{{kniha.url}}">{{kniha.data.title}}</a></h3>
+<p class="article__text--summary-page">{{kniha.data.popis}}</p>
+<p class="article__text--summary-page">{{kniha.data.perex}}</p>
+<p class="article__text--summary-page"><a href="{{kniha.url}}">Celý článek</a></p>
+<hr class="split-line">
+
+
+{% endfor %}

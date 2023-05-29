@@ -1,0 +1,95 @@
+---
+layout: layouts/layout.njk
+title: Kontakty
+---
+
+<h2 class="page__title">Kontakt</h2>
+
+<div class="contact-container">
+<p class="contact">Julie Stašková<br>
+  <a class="contact" href="mailto:julie@staskova.cz">E-mail: julie@staskova.cz</a><br>
+  <a class="contact" href="tel:777123456">Telefon: + 420 777 123 456</a>
+</p>
+</div>
+
+<form action="" method="post">
+
+  
+<div class="form-field">
+  <label for="jmeno">Jméno<span class="required">*</span></label>
+  <input 
+    type="text"
+    name="jmeno" 
+    id="jmeno" 
+    size="15" 
+    maxlength="15"
+    placeholder="Křestní jméno"
+    required
+     >
+    </div>
+
+    <div class="form-field">
+  <label for="prijmeni">Příjmení<span class="required">*</span></label>
+  <input 
+    type="text"
+    name="prijmeni" 
+    id="prijmeni" 
+    size="15" 
+    maxlength="15"
+    placeholder="Příjmení"
+    required
+     >
+    </div>
+
+     <div class="form-field">
+  <label for="telefon">Telefon</label>
+  <input 
+    type="tel"
+    name="telefon" 
+    id="telefon" 
+    size="15" 
+    maxlength="15"
+    placeholder="+ 420 000 000 000"
+      >
+    </div>
+
+      <div class="form-field">
+  <label for="email">E-mail<span class="required">*</span></label>
+  <input 
+    type="email"
+    name="email" 
+    id="email" 
+    size="25" 
+    maxlength="25"
+    placeholder="jmeno@domena.cz"
+    required
+    >
+    </div>
+
+ 
+
+    <select name="predmet" id="predmet">
+      <option>Obecný dotaz</option>
+      <option>Mapa</option>
+      <option>Příběh</option>
+      <option>Kniha</option>
+      <option>Deskovka</option>
+    </select>
+
+    <div class="form-field">
+    <label for="zprava">Zpráva<span class="required">*</span></label>
+    <textarea name="zprava"
+     id="zprava" 
+     cols="30" 
+     rows="10"
+     maxlength="100"
+     placeholder="Zde napište Vaši zprávu:"
+     required
+     ></textarea>
+    </div>
+
+  <input type="checkbox" name="souhlas" id="souhlas" value="ano">
+  <label for="souhlas">Souhlasím se zpracováním dat</label>
+<button type="submit">Odeslat</button>
+
+</form>
