@@ -217,38 +217,38 @@ body {
   flex-shrink: 1;
   }
 
-  .text{
-    padding-bottom: 0.8rem;
+.text{
+  padding-bottom: 0.8rem;
   }
 
-  .text__link{
+.text__link{
+  color: $color-primary;
+  font-weight: bold;
+  }
+
+.text__link:hover{
+  color: $color-hover;
+  }
+
+.article__title--summary-page{
     color: $color-primary;
-    font-weight: bold;
   }
 
-  .text__link:hover{
-    color: $color-hover;
+.article__title--summary-page:hover{
+  color: $color-hover;
   }
 
-  .article__title--summary-page{
-    color: $color-primary;
+.article__text--summary-page{
+  padding: 0.5rem 0.5rem;
   }
 
-  .article__title--summary-page:hover{
-    color: $color-hover;
+.text--notation{
+  font-style: italic;
+  font-size: 0.6rem;
   }
 
-  .article__text--summary-page{
-    padding: 0.5rem 0.5rem;
-  }
-
-  .text--notation{
-    font-style: italic;
-    font-size: 0.6rem;
-  }
-
-  .split-line{
-    margin: 1rem 0;
+.split-line{
+  margin: 1rem 0;
   }
 
 
@@ -455,6 +455,7 @@ input, textarea, select {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 2;
     
   }
 
