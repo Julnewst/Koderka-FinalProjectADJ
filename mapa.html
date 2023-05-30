@@ -32,6 +32,14 @@ title: Mapa
     let marker = new SMap.Marker(souradnice, "{{ pribeh.data.nazev }}", options);
     marker.decorate(SMap.Marker.Feature.Card, card);
     layer.addMarker(marker);
+
+    // Přidání třídy pro mobilní zobrazení
+  if (window.innerWidth < 768) {
+    card.getHeader().classList.add('mobile-size');
+    card.getBody().classList.add('mobile-size');
+    card.getContainer().classList.add('card-container');
+   }
+
   }
   {% endfor %}
 
@@ -49,7 +57,16 @@ title: Mapa
     let marker2 = new SMap.Marker(souradnice, "{{ kniha.data.nazev }}", options2);
     marker2.decorate(SMap.Marker.Feature.Card, card2);
     layer.addMarker(marker2);
+
+    // Přidání třídy pro mobilní zobrazení
+  if (window.innerWidth < 768) {
+    card2.getHeader().classList.add('mobile-size');
+    card2.getBody().classList.add('mobile-size');
+    card2.getContainer().classList.add('card-container');
+   }
+
   }
+
   {% endfor %}
 
   {% for deskovka in collections.deskovky %}
@@ -66,6 +83,13 @@ title: Mapa
     let marker3 = new SMap.Marker(souradnice, "{{ deskovka.data.nazev }}", options3);
     marker3.decorate(SMap.Marker.Feature.Card, card3);
     layer.addMarker(marker3);
+
+    // Přidání třídy pro mobilní zobrazení
+  if (window.innerWidth < 768) {
+    card3.getHeader().classList.add('mobile-size');
+    card3.getBody().classList.add('mobile-size');
+    card3.getContainer().classList.add('card-container');
+   }
   }
   
   {% endfor %}

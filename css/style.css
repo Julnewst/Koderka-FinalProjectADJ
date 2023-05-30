@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*font-family: 'Allura', cursive;
 font-family: 'Grechen Fuemen', cursive;
 font-family: 'Libre Franklin', sans-serif;
@@ -463,6 +464,16 @@ input, textarea, select {
   }
   .footer {
     font-size: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .mobile-size {
+    font-size: 14px;
+    /* Další styly pro změnu velikosti karty */
+  }
+  .card-container {
+    width: 200px; /* Šířka karty v mobilním zobrazení */
+    height: 150px; /* Výška karty v mobilním zobrazení */
   }
 }
 @media (max-width: 600px) {
