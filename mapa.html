@@ -22,8 +22,8 @@ title: Mapa
   {
     let souradnice = SMap.Coords.fromWGS84({{pribeh.data.lon}}, {{pribeh.data.lat}});
     let card = new SMap.Card();
-    card.getHeader().innerHTML = "<strong>{{ pribeh.data.title }}</strong>";
-    card.getBody().innerHTML = '<p>{{ pribeh.data.popis }}</p><p><a href="{{ pribeh.url }}">Článek</a></p>';
+    card.getHeader().innerHTML = '<strong><a href="{{ pribeh.url }}" class="map-card__title">{{ pribeh.data.title }}</a></strong>';
+    card.getBody().innerHTML = '<p class="map-card__text">{{ pribeh.data.popis }}</p>';
 
     let options = {
       title: "{{pribeh.data.nazev}}",
@@ -39,8 +39,8 @@ title: Mapa
   {
     let souradnice = SMap.Coords.fromWGS84({{kniha.data.lon}}, {{kniha.data.lat}});
     let card2 = new SMap.Card();
-    card2.getHeader().innerHTML = "<strong>{{ kniha.data.title }}</strong>";
-    card2.getBody().innerHTML = '<p>{{ kniha.data.popis }}</p><p><a href="{{ kniha.url }}">Článek</a></p>';
+    card2.getHeader().innerHTML = '<strong><a href="{{ kniha.url }}" class="map-card__title">{{ kniha.data.title }}</a></strong>';
+    card2.getBody().innerHTML = '<p class="map-card__text">{{ kniha.data.popis }}</p>';
 
     let options2 = {
       title: "{{kniha.data.nazev}}",
@@ -56,8 +56,8 @@ title: Mapa
   {
     let souradnice = SMap.Coords.fromWGS84({{deskovka.data.lon}}, {{deskovka.data.lat}});
     let card3 = new SMap.Card();
-    card3.getHeader().innerHTML = "<strong>{{ deskovka.data.title }}</strong>";
-    card3.getBody().innerHTML = '<p>{{ deskovka.data.popis }}</p><p><a href="{{ deskovka.url }}">Článek</a></p>';
+    card3.getHeader().innerHTML = '<strong><a href="{{ deskovka.url }}" class="map-card__title">{{ deskovka.data.title }}</a></strong>';
+    card3.getBody().innerHTML = '<p class="map-card__text">{{ deskovka.data.popis }}</p>';
 
     let options3 = {
       title: "{{deskovka.data.nazev}}",
