@@ -498,18 +498,6 @@ input, textarea, select {
 
 }
 
-@media (max-width: 767px) {
-  .mobile-size {
-    font-size: 14px;
-    /* Další styly pro změnu velikosti karty */
-  }
-
-  .card-container {
-    width: 200px; /* Šířka karty v mobilním zobrazení */
-    height: 150px; /* Výška karty v mobilním zobrazení */
-  }
-}
-
 
 @media(max-width:600px) {
 
